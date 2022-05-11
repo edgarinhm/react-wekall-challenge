@@ -1,8 +1,7 @@
-import { USERS_URL } from "../constants/api-constant";
+import { LOGIN_URL } from "../constants/api-constant";
 import { httpClient } from "../http-client";
 import { User } from "../interfaces/user-interface";
 
-const LOGIN_URL = `${USERS_URL}?email=`;
 class UserService {
   static async login(loginUser: User): Promise<User[]> {
     try {

@@ -18,3 +18,5 @@ export const GET = "GET";
 export const DELETE = "DELETE";
 export const PUT = "PUT";
 export const BEARER = "Bearer";
+export const LOGIN_URL = `${USERS_URL}?email=`;
+export const TOP_RECIPES = 10;
