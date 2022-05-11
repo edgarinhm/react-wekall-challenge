@@ -8,7 +8,7 @@ const FormStatus = () => {
   const { message } = useAppSelector((state) => state.form);
   const dispatch = useAppDispatch();
   useEffect(() => {
-    if (message !== "") dispatch(formStatus(""));
+    if (message) dispatch(formStatus(""));
   }, [dispatch]);
   return <>{message && <div className={style.form_status}>{message}</div>}</>;
 };
