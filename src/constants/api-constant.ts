@@ -1,5 +1,5 @@
-export const STUDENT_URL = "/Students";
-export const CLASSES_URL = "/Classes";
+export const USERS_URL = "/users";
+export const RECIPES_URL = "/recipes";
 export const ACCESS_TOKEN = "access-token";
 export const UNAUTHORIZED = "401";
 export const CLIENT = "client";

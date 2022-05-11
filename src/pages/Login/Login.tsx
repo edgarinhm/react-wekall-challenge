@@ -13,13 +13,6 @@ const Login = () => {
       <Loader />
       <form onSubmit={handleLogin}>
         <Input
-          type="name"
-          name="name"
-          label="name"
-          onChange={handleChange}
-          error={error.name}
-        />
-        <Input
           type="email"
           name="email"
           label="email"

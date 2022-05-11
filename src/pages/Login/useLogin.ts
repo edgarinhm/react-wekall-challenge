@@ -11,10 +11,12 @@ import routesPathsContant from "../../constants/routes-paths-constant";
 const useLogin = () => {
   interface FormData {
     [key: string]: string;
-    name: string;
+    email: string;
+    password: string;
   }
   const initState: FormData = {
-    name: "",
+    email: "",
+    password: "",
   };
 
   const { form, handleChange, disabled, error } = useForm<FormData>(
@@ -27,7 +29,14 @@ const useLogin = () => {
 
   const handleLogin = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch(login()).catch((errorLogin) => {
+    dispatch(
+      login({
+        name: form.name,
+        id: form.id,
+        email: form.email,
+        password: form.password,
+      })
+    ).catch((errorLogin) => {
       dispatch(formStatus(errorLogin.message));
     });
   };
