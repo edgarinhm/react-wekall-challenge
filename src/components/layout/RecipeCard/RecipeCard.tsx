@@ -1,5 +1,4 @@
 import style from "./recipe-card.module.scss";
-import { string } from "yup";
 
 interface RecipeCarProps {
   title: string;
