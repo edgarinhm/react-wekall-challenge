@@ -13,13 +13,17 @@ const useHome = () => {
   ).slice(0, TOP_RECIPES);
   const dispatch = useAppDispatch();
   const loadData = useCallback(async () => {
-    const data = await RecipeService.findAllRecipes();
-    if (data.length) {
-      dispatch(allRecipes(data));
-    } else {
-      dispatch(formStatus("recipes not found"));
-      throw Error();
-    }
+    await RecipeService.findAllRecipes()
+      .then((data) => {
+        if (data.length) {
+          dispatch(allRecipes(data));
+        } else {
+          dispatch(formStatus("recipes not found"));
+        }
+      })
+      .catch(() => {
+        dispatch(formStatus("upps, the service is not aviable, try again"));
+      });
   }, []);
 
   useEffect(() => {
