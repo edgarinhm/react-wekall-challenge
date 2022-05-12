@@ -3,12 +3,15 @@ import Loader from "../../components/layout/Loader";
 import Button from "../../components/common/Button";
 import Input from "../../components/common/Input";
 import useLogin from "./useLogin";
-import "./login.css";
+import styles from "./login.module.scss";
+import routesPathsContant from "../../constants/routes-paths-constant";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const { handleLogin, handleChange, disabled, error } = useLogin();
   return (
-    <section className="login_wrap">
+    <section className={styles.login_wrap}>
+      <h1>Login</h1>
       <FormStatus />
       <Loader />
       <form onSubmit={handleLogin}>
@@ -26,8 +29,11 @@ const Login = () => {
           onChange={handleChange}
           error={error.password}
         />
-        <div className="actions">
+        <div className={styles.actions}>
           <Button type="submit" label="Submit" disabled={disabled} />
+        </div>
+        <div className={styles.links}>
+          <Link to={routesPathsContant.signup}>signup</Link>
         </div>
       </form>
     </section>

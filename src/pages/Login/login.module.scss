@@ -1,0 +1,54 @@
+.login {
+    &_wrap {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        form {
+            padding: 1rem;
+            background: #f5f6ea;
+
+            label {
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-variant-numeric: normal;
+                font-variant-east-asian: normal;
+                font-weight: bold;
+                font-stretch: normal;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0;
+            }
+        }
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+
+    button:disabled {
+        background-color: lightgray;
+        color: lightslategray;
+        border-color: lightgrey;
+    }
+
+    button {
+        border-radius: 4px;
+        background: #d54215;
+        border: 3px solid #d54215;
+        color: #fff;
+    }
+}
+
+.links {
+    margin-top: .5rem;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+    }
+}

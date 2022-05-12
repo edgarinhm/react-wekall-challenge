@@ -11,6 +11,7 @@ const Signup = () => {
   const { handleSignup, handleChange, disabled, error } = useSignup();
   return (
     <section className={styles.signup_wrap}>
+      <h1>Signup</h1>
       <FormStatus />
       <Loader />
       <form className={styles.signup_form} onSubmit={handleSignup}>
