@@ -1,5 +1,6 @@
 import { createReducer, PayloadAction } from "@reduxjs/toolkit";
-import { login, logout } from "../../actions/user-actions";
+import { login, logout, signup } from "../../actions/user-actions";
+import { User } from "../../../interfaces/user-interface";
 
 export interface SessionState {
   authenticated: boolean;
@@ -32,8 +33,17 @@ const handleLogout = (state: SessionState) => {
   state.authenticated = initialState.authenticated;
 };
 
+const handleSignupFulfilled = (
+  state: SessionState,
+  { payload }: PayloadAction<User>
+) => {
+  state.authenticated = true;
+  state.user = { ...payload };
+};
+
 export default createReducer(initialState, {
   [login.fulfilled.type]: handleLoginFulfilled,
   [login.rejected.type]: handleLoginRejected,
+  [signup.fulfilled.type]: handleSignupFulfilled,
   [logout.type]: handleLogout,
 });

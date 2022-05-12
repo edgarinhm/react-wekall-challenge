@@ -20,4 +20,21 @@ export const login = createAsyncThunk(
   }
 );
 
+export const signup = createAsyncThunk(
+  "user/signup",
+  async (user: User, { dispatch }) => {
+    try {
+      const data = await UserService.signup(user);
+      if (!data) {
+        dispatch(formStatus("user not created"));
+        throw Error();
+      } else {
+        return { ...data, password: "" };
+      }
+    } catch (error) {
+      throw Error(error as string);
+    }
+  }
+);
+
 export const logout = createAction<boolean | undefined>("user/logout");

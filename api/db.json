@@ -1,231 +1,231 @@
 {
-    "users": [
+  "users": [
+    {
+      "id": 1,
+      "name": "edgar",
+      "email": "edgar@wekall.com",
+      "password": "12345678"
+    },
+    {
+      "id": 2,
+      "name": "Jenny",
+      "email": "jenny@wekall.com",
+      "password": "12345678"
+    }
+  ],
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Sugar Cookies With White Chocolate, Almonds, and Cranberries",
+      "description": "Unsalted, in the blue bag",
+      "image": "almonds-cookies.jpg",
+      "category": "dinner",
+      "rate": 5,
+      "checked": false
+    },
+    {
+      "id": 2,
+      "title": "Pizza",
+      "description": "A thin crust pizza dough recipe that's quick, easy, and delicious with Peperonni, onions, salsa",
+      "image": "pizza.jpg",
+      "category": "pasta",
+      "rate": 2,
+      "checked": false
+    },
+    {
+      "id": 3,
+      "title": "Polish Egg Bread",
+      "description": "This recipe came from a friend and it is fantastic. I was in Poland in August and enjoyed the bread there so I was glad when I received this recipe. Everyone asks me for the recipe.",
+      "image": "polish-egg-bread.jpg",
+      "category": "breakfast",
+      "rate": 8,
+      "checked": false
+    },
+    {
+      "id": 4,
+      "title": "French Spring Soup",
+      "description": "It is very fresh tasting, and the longer it sits, the better it is.",
+      "image": "french-spring-soup.jpg",
+      "category": "soup",
+      "rate": 10,
+      "checked": false
+    },
+    {
+      "id": 5,
+      "title": "Easter Deviled Eggs",
+      "description": "A very easy, special touch for Easter and fun to do at baby showers as well. Do some plain white ones to keep everyone happy.",
+      "image": "easter-deviled-eggs.jpg",
+      "category": "breakfast",
+      "rate": 6,
+      "checked": false
+    },
+    {
+      "id": 6,
+      "title": "World's Best Lasagna",
+      "description": "It takes a little work, but it is worth it.",
+      "image": "lasagna.jpg",
+      "category": "pasta",
+      "rate": 27,
+      "checked": false
+    },
+    {
+      "id": 7,
+      "title": "Leftover Pulled Pork",
+      "description": "Got leftover pulled pork that you don't want to go to waste? You're in luck! Put your leftovers to good use with these genius recipes",
+      "image": "leftover-pulled-pork.jpg",
+      "category": "pork",
+      "rate": 14,
+      "checked": false
+    },
+    {
+      "id": 8,
+      "title": "Spicy Salmon Dinner",
+      "description": "Looking for inspiration on how to spice up salmon dinners? From a sweet-spicy marinade for whole grilled salmon to fiery wasabi mayo salmon fillets, and spicy smoked salmon sushi recipes.",
+      "image": "spicy-salmon-dinner.jpg",
+      "category": "dinner",
+      "rate": 35,
+      "checked": false
+    },
+    {
+      "id": 9,
+      "title": "Pancakes",
+      "description": "Fluffy and sweet, pancakes are the ultimate breakfast treat.",
+      "image": "pancakes.jpg",
+      "category": "breakfast",
+      "rate": 50,
+      "checked": false
+    },
+    {
+      "id": 10,
+      "title": "Fragola Pazzo",
+      "description": "This is an Italian dessert that goes great with pasta. As the name suggests, it's a crazy combination but surprisingly excellent.",
+      "image": "fragola-pazzo.jpg",
+      "category": "dessert",
+      "rate": 33,
+      "checked": false
+    },
+    {
+      "id": 11,
+      "title": "Light and Delicious Pasta",
+      "description": "Stick-to-your-ribs pasta recipes seem like fall and winter meals, right? Sure, pasta salad knows no season.",
+      "image": "light-pasta.jpg",
+      "category": "pasta",
+      "rate": 9,
+      "checked": false
+    },
+    {
+      "id": 12,
+      "title": "Spinach and Strawberry Salad",
+      "description": "Make a top.rated salad with fresh spinach ans fresh strawberries",
+      "image": "spinach-and-strawberry.jpg",
+      "category": "salad",
+      "rate": 15,
+      "checked": false
+    },
+    {
+      "id": 13,
+      "title": "Lemon Icebox Pie",
+      "description": "A favorite dessert when a no-bake, fast pie is needed",
+      "image": "lemon-icebox-pie.jpg",
+      "category": "dessert",
+      "rate": 18,
+      "checked": false
+    },
+    {
+      "id": 14,
+      "title": "Spinach Quiche",
+      "description": "Let me start by saying that I devised the recipe myself, and I just sort of add this and that. The recipe is very forgiving",
+      "category": "dinner",
+      "image": "spinach-quiche.jpg",
+      "rate": 4,
+      "checked": false
+    },
+    {
+      "id": 15,
+      "title": "Honey Glazed Ham",
+      "description": "This ham tastes very much like the famous honey baked ham but costs much less, and there's no need to fight the crowds at holiday time",
+      "category": "meat",
+      "image": "honey-glazed-ham.jpg",
+      "rate": 10,
+      "checked": false
+    }
+  ],
+  "user-recipes": [
+    {
+      "id": 1,
+      "user": 1,
+      "recipes": [
         {
-            "id": 1,
-            "name": "edgar",
-            "email": "edgar@wekall.com",
-            "password": "12345678"
+          "id": 9,
+          "title": "Pancakes",
+          "description": "Fluffy and sweet, pancakes are the ultimate breakfast treat.",
+          "image": "pancakes.jpg",
+          "category": "breakfast",
+          "checked": false
         },
         {
-            "id": 1,
-            "name": "Jenny",
-            "email": "jenny@wekall.com",
-            "password": "12345678"
+          "id": 6,
+          "title": "World's Best Lasagna",
+          "description": "It takes a little work, but it is worth it.",
+          "image": "lasagna.jpg",
+          "category": "pasta",
+          "checked": false
+        },
+        {
+          "id": 3,
+          "title": "Bread and Eggs",
+          "description": "Integral for health, with berries",
+          "image": "bread-and-eggs.jpg",
+          "category": "breakfast",
+          "checked": false
+        },
+        {
+          "id": 15,
+          "title": "Honey Glazed Ham",
+          "description": "This ham tastes very much like the famous honey baked ham but costs much less, and there's no need to fight the crowds at holiday time",
+          "category": "meat",
+          "image": "honey-glazed-ham.jpg",
+          "checked": false
         }
-    ],
-    "recipes": [
+      ]
+    },
+    {
+      "id": 1,
+      "user": 1,
+      "recipes": [
         {
-            "id": 1,
-            "title": "Sugar Cookies With White Chocolate, Almonds, and Cranberries",
-            "description": "Unsalted, in the blue bag",
-            "image": "almonds-cookies.jpg",
-            "category": "dinner",
-            "rate": 5,
-            "checked": false
+          "id": 8,
+          "title": "Spicy Salmon Dinner",
+          "description": "Looking for inspiration on how to spice up salmon dinners? From a sweet-spicy marinade for whole grilled salmon to fiery wasabi mayo salmon fillets, and spicy smoked salmon sushi recipes.",
+          "image": "spicy-salmon-dinner.jpg",
+          "category": "dinner",
+          "checked": false
         },
         {
-            "id": 2,
-            "title": "Pizza",
-            "description": "A thin crust pizza dough recipe that's quick, easy, and delicious with Peperonni, onions, salsa",
-            "image": "pizza.jpg",
-            "category": "pasta",
-            "rate": 2,
-            "checked": false
+          "id": 9,
+          "title": "Pancakes",
+          "description": "Fluffy and sweet, pancakes are the ultimate breakfast treat.",
+          "image": "pancakes.jpg",
+          "category": "breakfast",
+          "checked": false
         },
         {
-            "id": 3,
-            "title": "Polish Egg Bread",
-            "description": "This recipe came from a friend and it is fantastic. I was in Poland in August and enjoyed the bread there so I was glad when I received this recipe. Everyone asks me for the recipe.",
-            "image": "polish-egg-bread.jpg",
-            "category": "breakfast",
-            "rate": 8,
-            "checked": false
+          "id": 10,
+          "title": "Fragola Pazzo",
+          "description": "This is an Italian dessert that goes great with pasta. As the name suggests, it's a crazy combination but surprisingly excellent.",
+          "image": "fragola-pazzo.jpg",
+          "category": "dessert",
+          "checked": false
         },
         {
-            "id": 4,
-            "title": "French Spring Soup",
-            "description": "It is very fresh tasting, and the longer it sits, the better it is.",
-            "image": "french-spring-soup.jpg",
-            "category": "soup",
-            "rate": 10,
-            "checked": false
-        },
-        {
-            "id": 5,
-            "title": "Easter Deviled Eggs",
-            "description": "A very easy, special touch for Easter and fun to do at baby showers as well. Do some plain white ones to keep everyone happy.",
-            "image": "easter-deviled-eggs.jpg",
-            "category": "breakfast",
-            "rate": 6,
-            "checked": false
-        },
-        {
-            "id": 6,
-            "title": "World's Best Lasagna",
-            "description": "It takes a little work, but it is worth it.",
-            "image": "lasagna.jpg",
-            "category": "pasta",
-            "rate": 27,
-            "checked": false
-        },
-        {
-            "id": 7,
-            "title": "Leftover Pulled Pork",
-            "description": "Got leftover pulled pork that you don't want to go to waste? You're in luck! Put your leftovers to good use with these genius recipes",
-            "image": "leftover-pulled-pork.jpg",
-            "category": "pork",
-            "rate": 14,
-            "checked": false
-        },
-        {
-            "id": 8,
-            "title": "Spicy Salmon Dinner",
-            "description": "Looking for inspiration on how to spice up salmon dinners? From a sweet-spicy marinade for whole grilled salmon to fiery wasabi mayo salmon fillets, and spicy smoked salmon sushi recipes.",
-            "image": "spicy-salmon-dinner.jpg",
-            "category": "dinner",
-            "rate": 35,
-            "checked": false
-        },
-        {
-            "id": 9,
-            "title": "Pancakes",
-            "description": "Fluffy and sweet, pancakes are the ultimate breakfast treat.",
-            "image": "pancakes.jpg",
-            "category": "breakfast",
-            "rate": 50,
-            "checked": false
-        },
-        {
-            "id": 10,
-            "title": "Fragola Pazzo",
-            "description": "This is an Italian dessert that goes great with pasta. As the name suggests, it's a crazy combination but surprisingly excellent.",
-            "image": "fragola-pazzo.jpg",
-            "category": "dessert",
-            "rate": 33,
-            "checked": false
-        },
-        {
-            "id": 11,
-            "title": "Light and Delicious Pasta",
-            "description": "Stick-to-your-ribs pasta recipes seem like fall and winter meals, right? Sure, pasta salad knows no season.",
-            "image": "light-pasta.jpg",
-            "category": "pasta",
-            "rate": 9,
-            "checked": false
-        },
-        {
-            "id": 12,
-            "title": "Spinach and Strawberry Salad",
-            "description": "Make a top.rated salad with fresh spinach ans fresh strawberries",
-            "image": "spinach-and-strawberry.jpg",
-            "category": "salad",
-            "rate": 15,
-            "checked": false
-        },
-        {
-            "id": 13,
-            "title": "Lemon Icebox Pie",
-            "description": "A favorite dessert when a no-bake, fast pie is needed",
-            "image": "lemon-icebox-pie.jpg",
-            "category": "dessert",
-            "rate": 18,
-            "checked": false
-        },
-        {
-            "id": 14,
-            "title": "Spinach Quiche",
-            "description": "Let me start by saying that I devised the recipe myself, and I just sort of add this and that. The recipe is very forgiving",
-            "category": "dinner",
-            "image": "spinach-quiche.jpg",
-            "rate": 4,
-            "checked": false
-        },
-        {
-            "id": 15,
-            "title": "Honey Glazed Ham",
-            "description": "This ham tastes very much like the famous honey baked ham but costs much less, and there's no need to fight the crowds at holiday time",
-            "category": "meat",
-            "image": "honey-glazed-ham.jpg",
-            "rate": 10,
-            "checked": false
+          "id": 11,
+          "title": "Light and Delicious Pasta",
+          "description": "Stick-to-your-ribs pasta recipes seem like fall and winter meals, right? Sure, pasta salad knows no season.",
+          "image": "light-pasta.jpg",
+          "category": "pasta",
+          "checked": false
         }
-    ],
-    "user-recipes": [
-        {
-            "id": 1,
-            "user": 1,
-            "recipes": [
-                {
-                    "id": 9,
-                    "title": "Pancakes",
-                    "description": "Fluffy and sweet, pancakes are the ultimate breakfast treat.",
-                    "image": "pancakes.jpg",
-                    "category": "breakfast",
-                    "checked": false
-                },
-                {
-                    "id": 6,
-                    "title": "World's Best Lasagna",
-                    "description": "It takes a little work, but it is worth it.",
-                    "image": "lasagna.jpg",
-                    "category": "pasta",
-                    "checked": false
-                },
-                {
-                    "id": 3,
-                    "title": "Bread and Eggs",
-                    "description": "Integral for health, with berries",
-                    "image": "bread-and-eggs.jpg",
-                    "category": "breakfast",
-                    "checked": false
-                },
-                {
-                    "id": 15,
-                    "title": "Honey Glazed Ham",
-                    "description": "This ham tastes very much like the famous honey baked ham but costs much less, and there's no need to fight the crowds at holiday time",
-                    "category": "meat",
-                    "image": "honey-glazed-ham.jpg",
-                    "checked": false
-                }
-            ]
-        },
-        {
-            "id": 1,
-            "user": 1,
-            "recipes": [
-                {
-                    "id": 8,
-                    "title": "Spicy Salmon Dinner",
-                    "description": "Looking for inspiration on how to spice up salmon dinners? From a sweet-spicy marinade for whole grilled salmon to fiery wasabi mayo salmon fillets, and spicy smoked salmon sushi recipes.",
-                    "image": "spicy-salmon-dinner.jpg",
-                    "category": "dinner",
-                    "checked": false
-                },
-                {
-                    "id": 9,
-                    "title": "Pancakes",
-                    "description": "Fluffy and sweet, pancakes are the ultimate breakfast treat.",
-                    "image": "pancakes.jpg",
-                    "category": "breakfast",
-                    "checked": false
-                },
-                {
-                    "id": 10,
-                    "title": "Fragola Pazzo",
-                    "description": "This is an Italian dessert that goes great with pasta. As the name suggests, it's a crazy combination but surprisingly excellent.",
-                    "image": "fragola-pazzo.jpg",
-                    "category": "dessert",
-                    "checked": false
-                },
-                {
-                    "id": 11,
-                    "title": "Light and Delicious Pasta",
-                    "description": "Stick-to-your-ribs pasta recipes seem like fall and winter meals, right? Sure, pasta salad knows no season.",
-                    "image": "light-pasta.jpg",
-                    "category": "pasta",
-                    "checked": false
-                }
-            ]
-        }
-    ]
+      ]
+    }
+  ]
 }

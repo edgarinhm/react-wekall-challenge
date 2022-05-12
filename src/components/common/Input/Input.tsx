@@ -1,5 +1,5 @@
 import { ChangeEvent, forwardRef } from "react";
-import "./input.css";
+import styles from "./input.module.scss";
 
 export interface InputProps {
   name: string;
@@ -36,9 +36,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     ref
   ) => {
     return (
-      <div className="container">
+      <div className={styles.container}>
         {label && (
-          <div className="label">
+          <div className={styles.label}>
             <label htmlFor={name}>
               {label} {isVisibleRequiredIcon && <span>*</span>}
             </label>
@@ -51,14 +51,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             onChange={onChange}
             onFocus={onFocus}
             placeholder={placeholder}
-            className="input"
+            className={styles.input}
             type={type}
             required={required}
             disabled={disabled}
             ref={ref}
             autoComplete={autocomplete}
           />
-          {error && <div className="error">{error}</div>}
+          {error && <div className={styles.error}>{error}</div>}
         </div>
       </div>
     );

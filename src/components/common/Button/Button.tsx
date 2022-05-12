@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import "./button.css";
+import styles from "./button.module.scss";
 
 export interface ButtonProps {
   label?: string;
@@ -13,7 +13,7 @@ export interface ButtonProps {
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { label, onClick, disabled = false, type = "button", icon, className },
+    { label, onClick, disabled = false, type = "button", icon, className = "" },
     ref
   ) => {
     return (
@@ -22,7 +22,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled}
         onClick={onClick}
         type={type}
-        className={`${className} button`}
+        className={`${className} ${styles.button}`}
         ref={ref}
       >
         {icon && <img src={icon} alt="icon" />}
