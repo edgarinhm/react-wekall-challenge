@@ -12,9 +12,9 @@ class RecipeService {
     }
   }
 
-  static sortRecipes(recipe: Recipe[]): Recipe[] {
+  static sortRecipes(recipe: Recipe[], orientantion = "dsc"): Recipe[] {
     return recipe.sort((a, b) => {
-      return a.rate - b.rate;
+      return orientantion == "dsc" ? b.rate - a.rate : a.rate - b.rate;
     });
   }
 }

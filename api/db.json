@@ -20,22 +20,25 @@
             "description": "Unsalted, in the blue bag",
             "image": "almonds-cookies.jpg",
             "category": "dinner",
+            "rate": 5,
             "checked": false
         },
         {
             "id": 2,
             "title": "Pizza",
-            "description": "Peperonni, onions, salsa",
+            "description": "A thin crust pizza dough recipe that's quick, easy, and delicious with Peperonni, onions, salsa",
             "image": "pizza.jpg",
             "category": "pasta",
+            "rate": 2,
             "checked": false
         },
         {
             "id": 3,
-            "title": "Bread and Eggs",
-            "description": "Integral for health, with berries",
-            "image": "bread-and-eggs.jpg",
+            "title": "Polish Egg Bread",
+            "description": "This recipe came from a friend and it is fantastic. I was in Poland in August and enjoyed the bread there so I was glad when I received this recipe. Everyone asks me for the recipe.",
+            "image": "polish-egg-bread.jpg",
             "category": "breakfast",
+            "rate": 8,
             "checked": false
         },
         {
@@ -44,6 +47,7 @@
             "description": "It is very fresh tasting, and the longer it sits, the better it is.",
             "image": "french-spring-soup.jpg",
             "category": "soup",
+            "rate": 10,
             "checked": false
         },
         {
@@ -52,6 +56,7 @@
             "description": "A very easy, special touch for Easter and fun to do at baby showers as well. Do some plain white ones to keep everyone happy.",
             "image": "easter-deviled-eggs.jpg",
             "category": "breakfast",
+            "rate": 6,
             "checked": false
         },
         {
@@ -60,6 +65,7 @@
             "description": "It takes a little work, but it is worth it.",
             "image": "lasagna.jpg",
             "category": "pasta",
+            "rate": 27,
             "checked": false
         },
         {
@@ -68,6 +74,7 @@
             "description": "Got leftover pulled pork that you don't want to go to waste? You're in luck! Put your leftovers to good use with these genius recipes",
             "image": "leftover-pulled-pork.jpg",
             "category": "pork",
+            "rate": 14,
             "checked": false
         },
         {
@@ -76,6 +83,7 @@
             "description": "Looking for inspiration on how to spice up salmon dinners? From a sweet-spicy marinade for whole grilled salmon to fiery wasabi mayo salmon fillets, and spicy smoked salmon sushi recipes.",
             "image": "spicy-salmon-dinner.jpg",
             "category": "dinner",
+            "rate": 35,
             "checked": false
         },
         {
@@ -84,6 +92,7 @@
             "description": "Fluffy and sweet, pancakes are the ultimate breakfast treat.",
             "image": "pancakes.jpg",
             "category": "breakfast",
+            "rate": 50,
             "checked": false
         },
         {
@@ -92,6 +101,7 @@
             "description": "This is an Italian dessert that goes great with pasta. As the name suggests, it's a crazy combination but surprisingly excellent.",
             "image": "fragola-pazzo.jpg",
             "category": "dessert",
+            "rate": 33,
             "checked": false
         },
         {
@@ -100,6 +110,7 @@
             "description": "Stick-to-your-ribs pasta recipes seem like fall and winter meals, right? Sure, pasta salad knows no season.",
             "image": "light-pasta.jpg",
             "category": "pasta",
+            "rate": 9,
             "checked": false
         },
         {
@@ -108,6 +119,7 @@
             "description": "Make a top.rated salad with fresh spinach ans fresh strawberries",
             "image": "spinach-and-strawberry.jpg",
             "category": "salad",
+            "rate": 15,
             "checked": false
         },
         {
@@ -116,6 +128,7 @@
             "description": "A favorite dessert when a no-bake, fast pie is needed",
             "image": "lemon-icebox-pie.jpg",
             "category": "dessert",
+            "rate": 18,
             "checked": false
         },
         {
@@ -124,6 +137,7 @@
             "description": "Let me start by saying that I devised the recipe myself, and I just sort of add this and that. The recipe is very forgiving",
             "category": "dinner",
             "image": "spinach-quiche.jpg",
+            "rate": 4,
             "checked": false
         },
         {
@@ -132,6 +146,7 @@
             "description": "This ham tastes very much like the famous honey baked ham but costs much less, and there's no need to fight the crowds at holiday time",
             "category": "meat",
             "image": "honey-glazed-ham.jpg",
+            "rate": 10,
             "checked": false
         }
     ],

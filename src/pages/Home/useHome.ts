@@ -15,7 +15,6 @@ const useHome = () => {
   const loadData = useCallback(async () => {
     const data = await RecipeService.findAllRecipes();
     if (data.length) {
-      console.log("if data", data);
       dispatch(allRecipes(data));
     } else {
       dispatch(formStatus("recipes not found"));

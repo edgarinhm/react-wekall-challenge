@@ -1,3 +1,52 @@
 .cards {
-    margin: 0;
+    background-color: #fff;
+    vertical-align: top;
+    display: flex;
+    margin-bottom: 32px;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+    width: 100%;
+
+    &_img_default {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        max-width: 100%;
+        aspect-ratio: auto 272 / 272;
+        object-fit: fill;
+    }
+
+    &_inner_container {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    &_body {
+        margin-bottom: 8px;
+    }
+
+    &_footer {
+        padding: 16px;
+    }
+
+    &_title {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 8px;
+    }
+
+    &_details {
+        margin: 0;
+    }
+
+    &_rating {
+        display: flex;
+        margin: 0 0 8px;
+    }
+
+    @media (min-width: 768px) {
+        border: 1px solid rgba(0, 0, 0, .15);
+        display: inline-block;
+        max-width: 270px;
+    }
+
 }
