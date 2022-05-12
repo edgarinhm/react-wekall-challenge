@@ -7,11 +7,19 @@ import styles from "./login.module.scss";
 import routesPathsContant from "../../constants/routes-paths-constant";
 import { Link } from "react-router-dom";
 
+import background from "../../assets/media/login.png";
+
 const Login = () => {
   const { handleLogin, handleChange, disabled, error } = useLogin();
+  const myStyle = {
+    backgroundImage: `url(${background})`,
+    height: "100vh",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+  };
   return (
-    <section className={styles.login_wrap}>
-      <h1>Login</h1>
+    <section style={myStyle} className={styles.login_wrap}>
+      <h1>Fun Cooking</h1>
       <FormStatus />
       <Loader />
       <form onSubmit={handleLogin}>
@@ -19,6 +27,7 @@ const Login = () => {
           type="email"
           name="email"
           label="email"
+          placeholder="email"
           onChange={handleChange}
           error={error.email}
         />
@@ -26,6 +35,7 @@ const Login = () => {
           type="password"
           name="password"
           label="password"
+          placeholder="password"
           onChange={handleChange}
           error={error.password}
         />
@@ -33,7 +43,8 @@ const Login = () => {
           <Button type="submit" label="Submit" disabled={disabled} />
         </div>
         <div className={styles.links}>
-          <Link to={routesPathsContant.signup}>signup</Link>
+          Don’t have an account?
+          <Link to={routesPathsContant.signup}>Sign Up</Link>
         </div>
       </form>
     </section>

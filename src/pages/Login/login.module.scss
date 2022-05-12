@@ -1,6 +1,5 @@
 .login {
     &_wrap {
-        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -8,7 +7,8 @@
 
         form {
             padding: 1rem;
-            background: #f5f6ea;
+            background: transparent;
+            color: white;
 
             label {
                 font-style: normal;
@@ -21,7 +21,30 @@
                 font-size: 18px;
                 line-height: 28px;
                 letter-spacing: 0;
+                text-align: left;
             }
+
+            input {
+                background: #F7F7F7;
+                border-radius: 5px;
+                height: 2rem;
+
+
+            }
+
+            ::placeholder {
+                color: #C7C7C7;
+                opacity: 1;
+                padding: .5rem;
+            }
+        }
+
+        h1 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 51px;
+            color: #F7F7F7;
         }
     }
 }
@@ -50,5 +73,6 @@
 
     a {
         text-decoration: none;
+        color: #FFCC29;
     }
 }

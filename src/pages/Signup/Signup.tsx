@@ -40,7 +40,8 @@ const Signup = () => {
           <Button type="submit" label="Signup" disabled={disabled} />
         </div>
         <div className={styles.signup_links}>
-          <Link to={routesPathsContant.login}>login</Link>
+          Already have an account?
+          <Link to={routesPathsContant.login}>Login</Link>
         </div>
       </form>
     </section>

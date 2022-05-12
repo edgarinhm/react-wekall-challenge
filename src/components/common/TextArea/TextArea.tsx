@@ -1,23 +1,24 @@
 import { ChangeEvent, forwardRef } from "react";
-import styles from "./input.module.scss";
+
+import styles from "./text-area.module.scss";
 
 export interface InputProps {
   name: string;
   value?: string | number;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
   label?: string;
   placeholder?: string;
   className?: string;
   required?: boolean;
   error?: string;
   type?: string;
-  onFocus?: (e: ChangeEvent<HTMLInputElement>) => void;
+  onFocus?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
   disabled?: boolean;
   autocomplete?: string;
   isVisibleRequiredIcon?: boolean;
 }
 
-const Input = forwardRef<HTMLInputElement, InputProps>(
+const TextArea = forwardRef<HTMLTextAreaElement, InputProps>(
   (
     {
       name,
@@ -25,9 +26,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       onChange,
       label,
       placeholder,
+      className,
       required = false,
       error,
-      type = "text",
       onFocus,
       disabled = false,
       autocomplete = "off",
@@ -36,23 +37,21 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     ref
   ) => {
     return (
-      <div className={styles.container}>
+      <div className={`input-container ${className}`}>
         {label && (
-          <div className={styles.label}>
+          <div className={styles.input_label}>
             <label htmlFor={name}>
               {label} {isVisibleRequiredIcon && <span>*</span>}
             </label>
           </div>
         )}
         <div>
-          <input
+          <textarea
             name={name}
-            defaultValue={value}
+            value={value}
             onChange={onChange}
             onFocus={onFocus}
             placeholder={placeholder}
-            className={styles.input}
-            type={type}
             required={required}
             disabled={disabled}
             ref={ref}
@@ -65,4 +64,4 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
   }
 );
 
-export default Input;
+export default TextArea;
