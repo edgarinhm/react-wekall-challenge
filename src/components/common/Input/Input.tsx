@@ -32,6 +32,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       disabled = false,
       autocomplete = "off",
       isVisibleRequiredIcon = false,
+      className,
     },
     ref
   ) => {
@@ -44,7 +45,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             </label>
           </div>
         )}
-        <div>
+        <div className={className}>
           <input
             name={name}
             defaultValue={value}

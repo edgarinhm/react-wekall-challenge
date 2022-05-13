@@ -37,7 +37,7 @@ const useRecipesList = ({ recipes }: useRecipesListProps) => {
 
   const handleFilter = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const filterRecipes = recipes.filter((recipe) => {
+    return recipes.filter((recipe) => {
       return (
         recipe.category.includes(filterValue) ||
         recipe.ingredients.includes(filterValue)

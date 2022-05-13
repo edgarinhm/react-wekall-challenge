@@ -2,22 +2,14 @@ import Button from "../../../components/common/Button/Button";
 import useRecipesList from "./useRecipesList";
 import { Recipe } from "../../../interfaces/recipe-interface";
 import styles from "./recipes-list.module.scss";
-import Input from "../../../components/common/Input/Input";
 
 interface RecipesListProps {
   recipes: Recipe[];
 }
 const RecipesList = ({ recipes }: RecipesListProps) => {
-  const { handleAdd, handleEdit, handleDelete, handleFilter, handleChange } =
-    useRecipesList({ recipes });
+  const { handleAdd, handleEdit, handleDelete } = useRecipesList({ recipes });
   return (
     <section>
-      <div className={styles.recipe_filter}>
-        <form onSubmit={handleFilter}>
-          <Input name="filter" label="Filter" onChange={handleChange} />
-          <Button type="submit"></Button>
-        </form>
-      </div>
       <Button
         className={styles.recipe_add}
         label="Add"

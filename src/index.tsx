@@ -6,7 +6,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import App from "./components/App/App";
 import { store, persistor } from "./state/store";
 import reportWebVitals from "./reportWebVitals";
-import "./index.css";
+import "./assets/styles/global.scss";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

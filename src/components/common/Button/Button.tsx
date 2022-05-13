@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, ReactFragment } from "react";
 import styles from "./button.module.scss";
 
 export interface ButtonProps {
@@ -9,11 +9,20 @@ export interface ButtonProps {
   isLoading?: boolean;
   className?: string;
   icon?: string;
+  children?: React.ReactNode;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { label, onClick, disabled = false, type = "button", icon, className = "" },
+    {
+      label,
+      onClick,
+      disabled = false,
+      type = "button",
+      icon,
+      className = "",
+      children,
+    },
     ref
   ) => {
     return (
@@ -27,6 +36,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {icon && <img src={icon} alt="icon" />}
         {label}
+        {children}
       </button>
     );
   }
