@@ -64,13 +64,15 @@ const RecipeForm = () => {
           label="notes"
           error={errors.notes?.message}
         />
-        <Button
-          className={styles.recipe_actions}
-          type="submit"
-          label="Submit"
-          disabled={!isValid}
-        />
-        <Button label="Cancel" onClick={handleCancel} />
+        <div className={styles.recipe_actions}>
+          <Button
+            className={styles.recipe_actions}
+            type="submit"
+            label="Submit"
+            disabled={!isValid}
+          />
+          <Button label="Cancel" onClick={handleCancel} />
+        </div>
       </form>
     </section>
   );
