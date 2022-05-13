@@ -33,7 +33,13 @@ const RecipeForm = () => {
           label="description"
           error={errors.description?.message}
         />
-        <Input {...register("image")} name="image" label="images" />
+        <Input
+          type="file"
+          className={styles.recipe_input_file}
+          {...register("image")}
+          name="image"
+          label="images"
+        />
         <Input
           {...register("preparation")}
           name="preparation"

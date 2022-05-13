@@ -56,11 +56,37 @@ const useRecipeForm = () => {
     resolver: yupResolver(recipeValidation),
   });
 
-  const OnSubmit = (form: FormData) => {
+  const covert2base64 = async (file: FileList | string): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file[0]! as Blob);
+      fileReader.onload = () => {
+        resolve(fileReader.result?.toString() || "");
+      };
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
+
+  const validateImageEncode = async (form: FormData): Promise<string> => {
+    if (form.image.includes("data:image/")) {
+      return form.image;
+    } else {
+      return covert2base64(form.image);
+    }
+  };
+
+  const OnSubmit = async (form: FormData) => {
     if (formAction === "Add") {
-      RecipeService.addRecipe({ ...form, checked: false, rate: 0 }).then(() =>
-        navigate(routesPathsContant.recipes)
-      );
+      const imageBase64 = await validateImageEncode(form);
+
+      RecipeService.addRecipe({
+        ...form,
+        image: imageBase64,
+        checked: false,
+        rate: 0,
+      }).then(() => navigate(routesPathsContant.recipes));
     } else {
       RecipeService.updateRecipe({ ...form, checked: false, rate: 0 }).then(
         () => {
