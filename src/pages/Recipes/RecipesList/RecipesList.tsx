@@ -6,6 +6,7 @@ import styles from "./recipes-list.module.scss";
 interface RecipesListProps {
   recipes: Recipe[];
 }
+
 const RecipesList = ({ recipes }: RecipesListProps) => {
   const { handleAdd, handleEdit, handleDelete } = useRecipesList();
   return (

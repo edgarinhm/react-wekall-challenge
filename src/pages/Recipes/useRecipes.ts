@@ -5,21 +5,30 @@ import useAppDispatch from "../../hooks/useAppDispatch";
 import useAppSelector from "../../hooks/useAppSelector";
 import RecipeService from "../../services/recipe-service";
 import { formStatus } from "../../state/actions/form-actions";
-import { allRecipes } from "../../state/actions/recipe-actions";
+import {
+  allRecipes,
+  setUserRecipes,
+  filterRecipes,
+} from "../../state/actions/recipe-actions";
 
 const useRecipes = () => {
-  const { recipes } = useAppSelector((state) => state.recipe);
+  const { recipes, filteredRecipes } = useAppSelector((state) => state.recipe);
   const { user } = useAppSelector((state) => state.session);
-  const userRecipes = RecipeService.filterRecipesByUserId(
-    Object.values(recipes),
-    user.id
-  );
+
+  const recipesList = Object.values(filteredRecipes);
+
   const dispatch = useAppDispatch();
   const loadData = useCallback(async () => {
     await RecipeService.findAllRecipes()
       .then((data) => {
         if (data.length) {
           dispatch(allRecipes(data));
+          const filterUserRecipes = RecipeService.filterRecipesByUserId(
+            data,
+            user.id
+          );
+          dispatch(setUserRecipes(filterUserRecipes));
+          dispatch(filterRecipes(filterUserRecipes));
         } else {
           dispatch(formStatus("recipes not found"));
         }
@@ -38,7 +47,7 @@ const useRecipes = () => {
   useEffect(() => {
     loadData();
   }, [loadData]);
-  return { userRecipes, handleAdd };
+  return { recipesList, handleAdd, recipes };
 };
 
 export default useRecipes;

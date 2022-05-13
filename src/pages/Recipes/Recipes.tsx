@@ -4,12 +4,12 @@ import RecipeSearch from "./RecipeSearch";
 import styles from "./recipes.module.scss";
 
 const Recipes = () => {
-  const { userRecipes } = useRecipe();
+  const { recipesList } = useRecipe();
   return (
     <article className={styles.recipes_wrap}>
       <h1>Recipes</h1>
       <RecipeSearch />
-      <RecipesList recipes={userRecipes} />
+      <RecipesList recipes={recipesList} />
     </article>
   );
 };

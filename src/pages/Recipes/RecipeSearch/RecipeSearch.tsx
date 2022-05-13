@@ -1,7 +1,7 @@
 import Button from "../../../components/common/Button";
 import Input from "../../../components/common/Input";
-import useRecipeSearch from "./useRecipeSearch";
 import styles from "./recipe-search.module.scss";
+import useRecipeSearch from "./useRecipeSearch";
 
 const RecipeSearch = () => {
   const { handleSearch, handleChange } = useRecipeSearch();
