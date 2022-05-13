@@ -21,6 +21,8 @@ const useRecipeSearch = () => {
           recipes.ingredients.includes(searchValue)
         );
       });
+
+      filteredLocalRecipes.sort((a, b) => a.updated.localeCompare(b.updated));
       dispatch(filterRecipes(filteredLocalRecipes));
     } else {
       dispatch(filterRecipes(userRecipes));

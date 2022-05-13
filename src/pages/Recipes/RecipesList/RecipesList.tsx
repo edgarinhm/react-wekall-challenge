@@ -18,7 +18,7 @@ const RecipesList = ({ recipes }: RecipesListProps) => {
       ></Button>
       {recipes.map((recipe, index) => {
         return (
-          <div key={index + recipe.id} className={styles.recipe_wrap}>
+          <div key={`${recipe.id}-${index}}`} className={styles.recipe_wrap}>
             <div className={styles.recipe_body}>
               <div className={styles.recipe_image}>
                 <img src={recipe.image} alt={`icon ${recipe.title}`} />
