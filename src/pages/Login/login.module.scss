@@ -9,6 +9,7 @@
             padding: 1rem;
             background: transparent;
             color: white;
+            width: auto;
 
             label {
                 font-style: normal;
@@ -47,6 +48,14 @@
             color: #F7F7F7;
         }
     }
+
+    &_submit {
+        background-color: #FFCC29;
+        border-radius: 20px;
+        color: black;
+        width: 10em;
+        font-weight: bold;
+    }
 }
 
 .actions {
@@ -54,17 +63,12 @@
     justify-content: center;
 
     button:disabled {
-        background-color: lightgray;
-        color: lightslategray;
-        border-color: lightgrey;
+        background-color: #d9d9d9;
+        border: 3px solid #d9d9d9;
+        color: white;
+        pointer-events: none;
     }
 
-    button {
-        border-radius: 4px;
-        background: #d54215;
-        border: 3px solid #d54215;
-        color: #fff;
-    }
 }
 
 .links {

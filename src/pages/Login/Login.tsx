@@ -40,7 +40,12 @@ const Login = () => {
           error={error.password}
         />
         <div className={styles.actions}>
-          <Button type="submit" label="Submit" disabled={disabled} />
+          <Button
+            className={styles.login_submit}
+            type="submit"
+            label="Sign In"
+            disabled={disabled}
+          />
         </div>
         <div className={styles.links}>
           Don’t have an account?
