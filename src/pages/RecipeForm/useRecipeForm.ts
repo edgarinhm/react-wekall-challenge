@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import routesPathsContant from "../../constants/routes-paths-constant";
 import useAppDispatch from "../../hooks/useAppDispatch";
 import { formResetRecipe } from "../../state/actions/form-actions";
+import { string } from "yup";
 
 const useRecipeForm = () => {
   const { recipe } = useAppSelector((state) => state.form);
@@ -70,17 +71,12 @@ const useRecipeForm = () => {
   };
 
   const validateImageEncode = async (form: FormData): Promise<string> => {
-    if (form.image.includes("data:image/")) {
-      return form.image;
-    } else {
-      return covert2base64(form.image);
-    }
+    return covert2base64(form.image);
   };
 
   const OnSubmit = async (form: FormData) => {
+    const imageBase64 = await validateImageEncode(form);
     if (formAction === "Add") {
-      const imageBase64 = await validateImageEncode(form);
-
       RecipeService.addRecipe({
         ...form,
         image: imageBase64,
@@ -88,12 +84,15 @@ const useRecipeForm = () => {
         rate: 0,
       }).then(() => navigate(routesPathsContant.recipes));
     } else {
-      RecipeService.updateRecipe({ ...form, checked: false, rate: 0 }).then(
-        () => {
-          dispatch(formResetRecipe());
-          navigate(routesPathsContant.recipes);
-        }
-      );
+      RecipeService.updateRecipe({
+        ...form,
+        image: imageBase64,
+        checked: false,
+        rate: 0,
+      }).then(() => {
+        dispatch(formResetRecipe());
+        navigate(routesPathsContant.recipes);
+      });
     }
   };
 
