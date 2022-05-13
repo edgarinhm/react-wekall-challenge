@@ -1,4 +1,4 @@
-import { forwardRef, ReactFragment } from "react";
+import { forwardRef } from "react";
 import styles from "./button.module.scss";
 
 export interface ButtonProps {
