@@ -1,6 +1,6 @@
  ## This rule redirects to an external API
 [build]
-   publish = "build/wekall-challenge"
+   publish = "build"
   command = "npm run build"
 [[redirects]]
   from = "/*"
