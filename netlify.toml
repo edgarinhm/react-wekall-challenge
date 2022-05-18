@@ -1,0 +1,8 @@
+ ## This rule redirects to an external API
+[build]
+   publish = "build/wekall-challenge"
+  command = "npm run build"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
